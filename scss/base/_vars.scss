@@ -1,9 +1,9 @@
 // color
-$main-color: #548235;
-$accent-color: #D4E1BD;
+$main-color: #7BD41C;
+$accent-color: rgba(241, 251, 230, 0.1);
 $secondary-color: #11332A; 
 $main-text: #3A3737;
-
+ 
 // breakpoint 
 $breakpoint1440: 1440 + px;
 $breakpoint1280: 1280 + px;
@@ -13,7 +13,8 @@ $breakpoint480: 480 + px;
 $breakpoint375: 375 + px;
 
 // font-family
-$font-family: '';
+$font-family: 'Montserrat';
+$font-family-title: 'Bowler';
 
 // border-radius
 $main-radius: 35px;
@@ -23,3 +24,24 @@ $container-width: 1440px;
 $section-top: 100px;
 $padding-md: 24px;
 $padding-sm: 16px;
+
+// animation
+@keyframes uicoreFadeInDown {
+    0% {
+        transform: translate3d(0, -7vh, 0)
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+@keyframes uicoreFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

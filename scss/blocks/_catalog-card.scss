@@ -1,0 +1,79 @@
+.catalog-card {
+    box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+    background: #2f302d;
+    border-radius: 17px;
+
+    &__top {
+        height: 215px;
+
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    &__img {
+        object-fit: contain;
+    }
+
+    &__body {
+        padding: 20px 52px 32px;
+
+        border-radius: 16px;
+        background: $accent-color;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    &__dropdown {
+        margin-top: 22px;
+
+        &-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            color: rgba(255, 255, 255, 0.8);
+
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+            & svg {
+                fill: rgba(255, 255, 255, 0.8);
+                transition: color .3s, rotate .3s;
+            }
+        }
+
+        &-wrapper {
+
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all .3s;
+        }
+
+        &.open { 
+
+            & .catalog-card__dropdown {
+                &-toggle {
+                    color: $main-color;
+
+                    & svg {
+                        fill: $main-color;
+                        rotate: 180deg;
+                    }
+                }
+                &-wrapper {
+                    margin-top: 28px;
+                    grid-template-rows: 1fr;
+                }
+            }
+        }
+    }
+}

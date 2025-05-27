@@ -1,0 +1,39 @@
+.about-advantages {
+    padding-top: 45px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    &__item {
+        box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+        background: #2f302d;
+        padding: 28px 22px;
+        border-radius: 20px;
+
+        transition: box-shadow .3s;
+
+        &:hover {
+            box-shadow: 0 0 9px 0 rgba(132, 255, 0, 0.64);
+        }
+    }
+
+    &__icon {
+        height: 74px;
+
+        & img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        margin-top: 28px;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 123%;
+    }
+}

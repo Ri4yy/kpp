@@ -1,0 +1,46 @@
+.hero {
+    &__wrapper {
+        position: relative;
+        padding: 38px 0 28px;
+        
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    &__left {
+        max-width: 50%;
+        z-index: 1;
+    }
+    &__right {
+        z-index: 1;
+    }
+    &__title {
+        font-family: $font-family-title;
+        font-weight: 400;
+        font-size: 96px;
+        line-height: 120%;
+        text-transform: uppercase;
+
+        & span {
+            color: $main-color;
+        }
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 120%;
+    }
+    &__btn {
+        margin-top: 48px;
+    }
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    &__bottom {
+        margin: 28px 0 60px;
+    }
+}

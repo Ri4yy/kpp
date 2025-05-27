@@ -1,0 +1,14 @@
+.faq {
+
+    &__wrapper {
+        max-width: 954px;
+        margin: 0 auto;
+    }
+    &__bottom {
+        margin-top: 48px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    } 
+}

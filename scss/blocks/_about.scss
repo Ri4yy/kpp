@@ -1,0 +1,50 @@
+.about {
+    position: relative;
+    padding-bottom: 95px;
+
+    &::after {
+        content: '';
+        background: url(/assets/img/bg/about-bg.svg);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        aspect-ratio: 1440 / 124;
+        height: 124px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+
+        width: 460px;
+    }
+    &__right {
+        width: 57.5%;
+    }
+
+    &__title {
+        font-family: $font-family-title;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: rgba(123, 212, 28, 0.94);
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+    }
+}

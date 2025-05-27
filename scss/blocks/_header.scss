@@ -1,36 +1,38 @@
 .header {
     position: relative;
-    background: #fff;
 
     &__wrapper {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 29px 0;
+        padding: 39px 0;
         z-index: 2;
 
         @media(max-width: $breakpoint768) {
-            padding: 20px 0;
+            padding: 24px 0;
         }
         @media(max-width: $breakpoint480) {
-            padding: 16px 0;
+            padding: 18px 0;
         }
     }
 
-    &__contacts {
+    &__right {
         display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-    &__mail {
-
+        align-items: center;
+        gap: 30px;
     }
     &__phone {
+        & svg {
+            fill: #fff;
+            transition: fill .4s, scale .4s;
+        }
 
+        &:hover {
+            & svg {
+                fill: $main-color;
+                scale: .95;
+            }
+        }
     }
-}
-
-.logo {
-    
 }

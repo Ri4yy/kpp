@@ -1,0 +1,54 @@
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        width: 400px;
+        object-fit: contain;
+    }
+
+    &__right {
+        width: 62%;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+    }
+    &__article {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+
+        & span {
+            color: $main-color;
+        }
+    }
+
+    &__desc {
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+
+        & span {
+            font-weight: 500;
+            line-height: 120%;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}

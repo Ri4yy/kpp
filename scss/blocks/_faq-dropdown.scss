@@ -1,0 +1,94 @@
+.faq-dropdown {
+    
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        &:first-child {
+            padding-top: 0;
+        }
+
+        padding: 22px 0;
+
+        border-bottom: 1px solid rgba(250, 248, 246, 0.7);
+
+        &.open {
+            & .faq-dropdown {
+                &__title {
+                    color: $main-color;
+                    text-shadow: 0 0 9px rgba(132, 255, 0, 0.64);
+                }
+                &__body {
+                    margin-top: 22px;
+                    grid-template-rows: 1fr;
+                }
+                &__icon {
+                    &::after {
+                        transform: translateY(100%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        width: 100%;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: left;
+        color: #faf8f6;
+    }
+
+    &__icon {
+        overflow: hidden;
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+
+        position: relative;
+
+        &::before, &::after { 
+            content: '';
+            background-color: $main-color;
+            position: absolute;
+        }
+        &::before {
+            height: 2px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &::after {
+            height: 100%;
+            width: 2px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform .3s;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows .3s, margin-top .3s;
+    }
+    &__text {
+        min-height: 0;
+
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 130%;
+        color: #faf8f6;
+    }
+}

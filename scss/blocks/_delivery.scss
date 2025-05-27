@@ -1,0 +1,32 @@
+.delivery {
+    max-width: 954px;
+    margin: 0 auto;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 20px;
+    }
+
+    &__item {
+        box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+        background: #2f302d;
+        border-radius: 20px;
+        padding: 40px 32px;
+    }
+
+    &__icon {
+        height: 74px;
+
+        & img {
+            object-fit: contain;
+        }
+    }
+    &__text {
+        margin-top: 28px;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 126%;
+    }
+}

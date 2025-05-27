@@ -1,0 +1,35 @@
+.hero-advantages {
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 12px 24px 12px 30px;
+        background: $accent-color;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 30px;
+
+        transition: border-color .3s, scale .3s;
+
+        &-text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: center;
+            color: #fff;
+        }
+
+        &:hover {
+            scale: 1.02;
+            border-color: rgba(123, 212, 28, .5);
+        }
+    }
+}
