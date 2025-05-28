@@ -1,11 +1,22 @@
 .form-feedback {
     margin-top: 56px;
 
+    @media(max-width: $breakpoint600) {
+        margin-top: 40px;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 28px;
+    }
+
     &__body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         row-gap: 16px;
         column-gap: 6px;
+
+        @media(max-width: $breakpoint600) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__bottom {
@@ -14,11 +25,20 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @media(max-width: $breakpoint600) {
+            flex-direction: column;
+        }
     }
     &__agree {
         font-weight: 400;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.7);
+
+        @media(max-width: $breakpoint600) {
+            font-size: 12px;
+            text-align: center;
+        }
     }
 
     & textarea {

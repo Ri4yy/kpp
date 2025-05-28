@@ -5,4 +5,9 @@
     src: url('Bowler.ttf') format('truetype');
     font-display: swap;
 }
+@font-face {
+    font-family: 'NicoMoji';
+    src: url('NicoMoji-Regular.ttf') format('truetype');
+    font-display: swap;
+}
 

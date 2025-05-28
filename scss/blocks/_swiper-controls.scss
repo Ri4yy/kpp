@@ -1,0 +1,138 @@
+.swiper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+
+    @media(max-width: $breakpoint768) {
+        gap: 24px;
+    }
+    @media(max-width: $breakpoint375) {
+        gap: 20px;
+        width: 100%;
+    }
+
+    &--info {
+        & .swiper-controls {
+            &__btn {
+                border-radius: 5px;
+                background: rgba(241, 251, 230, .21);
+                width: 43px;
+                height: 43px;
+
+                @media(max-width: $breakpoint480) {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+    &--reviews {
+        margin-top: 48px;
+
+        @media(max-width: $breakpoint1024) {
+            margin-top: 58px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 32px;
+        }
+
+        & .swiper-controls {
+            &__progressbar {
+                width: 215px;
+
+                @media(max-width: $breakpoint480) {
+                    width: 100px;
+                }
+            }
+
+            &__btn {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+
+
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            cursor: default;
+
+            & svg {
+                fill: #848484;
+            }
+        }
+        & svg {
+            fill: $main-color;
+
+            @media(max-width: $breakpoint480) {
+                height: 14px;
+            }
+        }
+    }
+    &__btn-group {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__fraction {
+        display: flex;
+        gap: 15px;
+
+        @media(max-width: $breakpoint768) {
+            gap: 10px;
+        }
+        @media(max-width: $breakpoint375) {
+            width: 100%;
+        }
+    }
+    &__current, &__total {
+        font-family: $font-family-third;
+        font-weight: 400;
+        font-size: 40px;
+        color: rgba(123, 212, 28, 0.92);
+
+        @media(max-width: $breakpoint768) {
+            font-size: 32px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 25px;
+        }
+    }
+    &__progressbar {
+        position: relative;
+        width: 165px;
+
+        @media(max-width: $breakpoint768) {
+            width: 120px;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 106px;
+        }
+        @media(max-width: $breakpoint375) {
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        & .swiper-pagination {
+            bottom: 10px;
+            top: auto;
+            background: #848484;
+            border-radius: 35px;
+            height: 5px;
+
+            & .swiper-pagination-progressbar-fill {
+                background: $main-color;
+                border-radius: 35px;
+                height: 5px;
+            }
+        }
+    }
+}

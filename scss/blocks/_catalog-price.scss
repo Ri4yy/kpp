@@ -4,5 +4,16 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
+
+        @media(max-width: $breakpoint1024) {
+            max-width: 736px;
+            margin: 0 auto;
+            gap: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            grid-template-columns: 1fr;
+            max-width: 345px;
+            gap: 14px;
+        }
     }
 }

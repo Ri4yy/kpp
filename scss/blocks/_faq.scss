@@ -10,5 +10,9 @@
 
         display: flex;
         justify-content: center;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 28px;
+        }
     } 
 }

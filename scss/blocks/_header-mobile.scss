@@ -1,0 +1,85 @@
+.header-mobile {
+    display: none;
+    transform: translateX(100%);
+    transition: transform .3s;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+    @media(max-width: $breakpoint1280) {
+        display: flex;
+    }
+
+    &.open {
+        transform: translateX(0);
+        box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+    }
+
+    &__wrapper {
+
+        width: 390px;
+        padding: 190px 40px;
+        border-radius: 0 0 0 20px;
+        background: #252726;
+    
+        height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: $breakpoint480) {
+            width: 280px;
+            padding: 110px 24px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media(max-width: $breakpoint480) {
+            gap: 12px;
+        }
+    }
+    &__link {
+        font-weight: 600;
+        font-size: 22px;
+        text-transform: lowercase;
+        color: #fff;
+
+        @media(max-width: $breakpoint480) {
+            font-size: 20px;
+        }
+    }
+    &__bottom {
+        margin-top: 80px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 50px;
+        }
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__btn {
+        margin-top: 22px;
+        background: #252726;
+        color: #fff;
+
+        & svg {
+            width: 26px;
+        }
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 50px;
+        }
+    }
+}

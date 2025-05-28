@@ -1,0 +1,40 @@
+.modal-form {
+    $modal-width: 700px;
+    $modal-height: auto;
+
+    &__body {
+        height: $modal-height;
+        max-width: $modal-width;
+        width: 100%;
+
+        @media(max-width: calc($modal-width + 20px)) {
+            max-width: 98vw;
+        }
+    }
+    &__wrapper {
+        padding: 82px 40px 60px;
+
+        @media(max-width: $breakpoint480) { 
+            padding: 82px 16px 56px;
+        }
+        @media(max-width: $breakpoint375) { 
+            padding: 52px 12px 40px;
+        }
+    }
+    &__close {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 44px;
+    
+        @media(max-width: $breakpoint480) {
+            width: 22px;
+            top: 32px;
+            right: 16px;
+        }
+        @media(max-width: $breakpoint375) {
+            width: 16px;
+            top: 20px;
+        }
+    }
+}

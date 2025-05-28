@@ -4,6 +4,7 @@
 @import "./base/base";
 // Blocks
 @import "./blocks/header";
+@import "./blocks/header-mobile";
 @import "./blocks/modal";
 @import "./blocks/menu";
 @import "./blocks/menu-nav";
@@ -36,6 +37,10 @@
 @import "./blocks/footer";
 @import "./blocks/footer-menu";
 @import "./blocks/social-list";
+@import "./blocks/swiper-controls";
+@import "./blocks/modal-form";
+@import "./blocks/modal-form-block";
+@import "./blocks/feedback-form";
 
 // Custom
 @import "./blocks/custom-checkbox";

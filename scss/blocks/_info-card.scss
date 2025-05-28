@@ -4,29 +4,64 @@
     justify-content: space-between;
     gap: 40px;
 
+    @media(max-width: $breakpoint1024) {
+        flex-direction: column;
+        gap: 28px;
+    }
+
     &__left {
+        width: 32%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media(max-width: $breakpoint1024) {
+            width: 100%;
+        }
     }
     &__img {
-        width: 400px;
         object-fit: contain;
+
+        @media(max-width: $breakpoint1024) {
+            max-width: 400px;
+        }
+        @media(max-width: $breakpoint480) {
+            max-width: 265px;
+        }
     }
 
     &__right {
         width: 62%;
+
+        @media(max-width: $breakpoint1024) {
+            width: 100%;
+        }
     }
     &__name {
         font-weight: 700;
         font-size: 36px;
         line-height: 120%;
+
+        @media(max-width: $breakpoint1024) {
+            font-size: 32px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 20px;
+        }
     }
     &__article {
         margin-top: 20px;
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
+
+        @media(max-width: $breakpoint1024) {
+            font-size: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 8px;
+            font-size: 16px;
+        }
 
         & span {
             color: $main-color;
@@ -44,11 +79,24 @@
         font-size: 20px;
         line-height: 120%;
 
+        @media(max-width: $breakpoint1024) {
+            font-size: 18px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+            font-size: 16px;
+            gap: 16px;
+        }
+
         & span {
             font-weight: 500;
             line-height: 120%;
             font-size: 16px;
             color: rgba(255, 255, 255, 0.8);
+
+            @media(max-width: $breakpoint480) {
+                font-size: 14px;
+            }
         }
     }
 }

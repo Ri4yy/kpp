@@ -1,0 +1,61 @@
+.feedback-form {
+    margin: 40px auto 0;
+    max-width: 424px;
+    
+    @media(max-width: $breakpoint480) {
+        margin-top: 35px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media(max-width: $breakpoint480) {
+            gap: 16px;
+        }
+    }
+    &__input {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+        padding: 16px 24px;
+        background: #252726;
+
+        font-weight: 400;
+        font-size: 20px;
+        color: #c4c4c4;
+
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 20px;
+            color: #c4c4c4;
+
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
+        }
+    }
+    &__bottom {
+        margin-top: 32px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__btn {    
+        padding: 12px 42px;
+    }
+
+    &__confirm {
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+    }
+}

@@ -6,6 +6,7 @@ body {
     scroll-behavior: smooth;
     background-color: #252726;
     color: #fff;
+    overflow-x: hidden;
 }
 
 // Заголовки
@@ -21,6 +22,13 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     color: #fff;
+
+    @media(max-width: $breakpoint768) {
+        font-size: 36px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 24px;
+    }
 }
 
 // База
@@ -34,6 +42,9 @@ h2 {
 
         @media(max-width: $breakpoint768) {
             margin-top: 38px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 28px;
         }
     }
 

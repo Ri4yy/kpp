@@ -1,10 +1,27 @@
 .about-advantages {
     padding-top: 45px;
 
+    @media(max-width: $breakpoint768) {
+        padding-top: 26px;
+    }
+    @media(max-width: $breakpoint480) {
+        padding-top: 18px;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
+
+        @media(max-width: $breakpoint768) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(max-width: $breakpoint600) {
+            gap: 10px;
+        }
+        @media(max-width: 420px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -15,6 +32,10 @@
 
         transition: box-shadow .3s;
 
+        @media(max-width: $breakpoint600) {
+            padding: 14px 10px;
+        }
+
         &:hover {
             box-shadow: 0 0 9px 0 rgba(132, 255, 0, 0.64);
         }
@@ -22,6 +43,13 @@
 
     &__icon {
         height: 74px;
+
+        @media(max-width: $breakpoint600) {
+            height: 44px;
+        }
+        @media(max-width: $breakpoint480) {
+            height: 36px;
+        }
 
         & img {
             height: 100%;
@@ -35,5 +63,13 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 123%;
+
+        @media(max-width: $breakpoint600) {
+            margin-top: 14px;
+            font-size: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
     }
 }

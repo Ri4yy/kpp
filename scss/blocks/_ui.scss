@@ -74,9 +74,22 @@
         text-align: center;
         color: #fff;
 
+        @media(max-width: $breakpoint768) {
+            font-size: 18px;
+            gap: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+            gap: 14px;
+        }
+
         & svg {
             fill: #fff;
             flex-shrink: 0;
+
+            @media(max-width: $breakpoint480) {
+                height: 13px;
+            }
         }
     }
 
@@ -116,10 +129,10 @@
             & .ui-menu-item-wrapper:nth-child(2) {
                 transform: translate(0, 50%);
                 opacity: 1;
-                color: $main-color;
+                color: #2F302D;
 
                 & svg {
-                    fill: $main-color;  
+                    fill: #2F302D;  
                 }
             }
         }
@@ -131,6 +144,7 @@
 }
 
 input {
+    width: 100%;
     border: 1px solid #2f302d;
     border-radius: 16px;
     padding: 20px 24px;
@@ -140,11 +154,24 @@ input {
     font-weight: 400;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
+    transition: box-shadow .2s;
+
+    @media(max-width: $breakpoint480) {
+        font-size: 14px;
+    }
 
     &::placeholder {
         font-weight: 400;
         font-size: 18px;
         color: rgba(255, 255, 255, 0.7);
+
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+
+    &:hover, &:focus {
+        box-shadow: 0 0 9px 0 rgba(132, 255, 0, 0.64);
     }
 }
 
@@ -159,9 +186,26 @@ textarea {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
 
+    height: 140px;
+    resize: none;
+    transition: box-shadow .2s;
+    outline: none;
+
+    @media(max-width: $breakpoint480) {
+        font-size: 14px;
+    }
+
     &::placeholder {
         font-weight: 400;
         font-size: 18px;
         color: rgba(255, 255, 255, 0.7);
+
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+
+        &:hover, &:focus {
+        box-shadow: 0 0 9px 0 rgba(132, 255, 0, 0.64);
     }
 }

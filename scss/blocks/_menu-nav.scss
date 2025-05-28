@@ -4,10 +4,7 @@
     gap: 45px;
 
     @media(max-width: $breakpoint1280) {
-        gap: 16px;
-    }
-    @media(max-width: $breakpoint1024) {
-        gap: 6px;
+        gap: 14px;
     }
 
     &__item {
@@ -20,8 +17,8 @@
         text-transform: lowercase;
         color: #fff;
 
-        @media(max-width: $breakpoint1024) {
-            font-size: 16px;
+        @media(max-width: $breakpoint1180) {
+            font-size: 18px;
         }
 
         &--active {

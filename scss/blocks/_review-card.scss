@@ -40,9 +40,12 @@
             line-height: 130%;
             text-transform: capitalize;
 
-            @media(max-width: $breakpoint480) {
+            @media(max-width: $breakpoint768) {
                 font-size: 20px;
                 gap: 8px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 18px;
             }
 
             &::before {
@@ -62,15 +65,16 @@
         }
     }
     &__text {
-        margin-top: 24px;
-        margin-bottom: 48px;
+        margin-top: 30px;
+        margin-bottom: 30px;
 
         font-weight: 500;
         font-size: 18px;
         line-height: 130%;
         
         @media(max-width: $breakpoint480) {
-            margin: 16px 0 30px;
+            margin: 22px 0;
+            font-size: 15px;
         }
     }
     &__bottom {
@@ -81,8 +85,11 @@
         font-size: 16px;
         line-height: 130%;
 
-        @media(max-width: $breakpoint480) {
+        @media(max-width: $breakpoint768) {
             font-size: 14px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 12px;
         }
     }
 }

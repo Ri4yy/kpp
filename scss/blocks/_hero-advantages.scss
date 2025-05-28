@@ -5,6 +5,14 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 22px;
+
+        @media(max-width: $breakpoint1024) {
+            column-gap: 10px;
+            row-gap: 16px;
+        }
+        @media(max-width: $breakpoint480) {
+            row-gap: 14px;
+        }
     }
 
     &__item {
@@ -17,19 +25,37 @@
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 30px;
 
-        transition: border-color .3s, scale .3s;
+        transition: border-color .3s, scale .3s, box-shadow .3s;
+    
+        @media(max-width: $breakpoint1024) {
+            padding: 10px 20px 10px 26px;
+        }
 
+        & img {
+            @media(max-width: $breakpoint1024) {
+                height: 15px;
+            }
+        }
         &-text {
             font-weight: 700;
             font-size: 16px;
             line-height: 120%;
             text-align: center;
             color: #fff;
+
+            @media(max-width: $breakpoint1024) {
+                font-size: 15px;
+            }
+            @media(max-width: $breakpoint480) {
+                text-align: left;
+                font-size: 13px;
+            }
         }
 
         &:hover {
             scale: 1.02;
             border-color: rgba(123, 212, 28, .5);
+            box-shadow: 0 0 9px 0 rgba(132, 255, 0, 0.64);
         }
     }
 }

@@ -25,6 +25,13 @@
         font-size: 24px;
         line-height: 120%;
         text-align: center;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 21px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 20px;
+        }
     }
 
     &__dropdown {
@@ -43,6 +50,13 @@
 
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+            @media(max-width: $breakpoint768) {
+                font-size: 18px;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 16px;
+            }
 
             & svg {
                 fill: rgba(255, 255, 255, 0.8);
@@ -72,6 +86,10 @@
                 &-wrapper {
                     margin-top: 28px;
                     grid-template-rows: 1fr;
+
+                    @media(max-width: $breakpoint768) {
+                        margin-top: 20px;
+                    }
                 }
             }
         }

@@ -1,19 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let menu = document.querySelector('.menu'),
-    btnMenu = document.querySelector('.btn-menu');
+    let menu = document.querySelector('.header-mobile'),
+        btnMenu = document.querySelector('.btn-menu'),
+        html = document.querySelector('html'),
+        menuLink = document.querySelectorAll('.header-mobile__link');
 
     btnMenu.addEventListener('click', (e) => {
-        menu.classList.toggle('menu--open')
+        menu.classList.toggle('open')
 
         btnMenu.classList.toggle('btn-menu--open')
+        html.classList.toggle('no-scroll')
     })
+    menuLink.forEach(el => {
+        el.addEventListener('click', (e) => {
+            menu.classList.remove('open')
+
+            btnMenu.classList.remove('btn-menu--open')
+            html.classList.remove('no-scroll')
+        })
+    });
 
     function resize() {
         let width = window.innerWidth;
 
-        if (width > 768) {
-            menu.classList.remove('menu--open')
+        if (width > 1280) {
+            menu.classList.remove('open')
             btnMenu.classList.remove('btn-menu--open')
+            html.classList.remove('no-scroll')
         } else {
             return
         }
@@ -23,6 +35,37 @@ document.addEventListener('DOMContentLoaded', () => {
         resize()
     })
     resize()
+
+    // Модальное окно
+    function showModal(btnOpen, modalBody) {
+        btnOpen.click(function () {
+            modalBody.addClass('active');
+            $('html').addClass('no-scroll');
+            return false;
+        });
+
+        $(document).keydown(function (e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                modalBody.removeClass('active');
+                $('html').removeClass('no-scroll');
+            }
+        });
+
+        modalBody.click(function (e) {
+            if ($(e.target).closest('.modal__wrapper').length == 0) {
+                $(this).removeClass('active');
+                $('html').removeClass('no-scroll');
+            }
+        });
+
+        $('.close-modal').click((e) => {
+            modalBody.removeClass('active');
+            $('html').removeClass('no-scroll');
+        })
+    }
+
+    showModal($('.open-modal'), $('.modal-form'));
 
     // Toggler catalog
     const dropdownToggles = document.querySelectorAll('.catalog-card__dropdown-toggle');

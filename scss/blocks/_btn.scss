@@ -4,6 +4,10 @@
     padding: 16px 30px;
     flex-shrink: 0;
 
+    @media(max-width: $breakpoint480) {
+        padding: 10px 20px;
+    }
+
     &--type-2 {
         background: rgba(123, 212, 28, 0.6);
     }

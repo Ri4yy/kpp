@@ -2,10 +2,10 @@
     padding: 60px 0 26px;
 
     @media(max-width: $breakpoint768) {
-        padding: 28px 0;
+        padding: 40px 0;
     }
     @media(max-width: $breakpoint480) {
-        padding: 18px 0;
+        padding: 30px 0;
     }
 
     &__wrapper {
@@ -23,13 +23,13 @@
             align-items: start;
             gap: 20px;
 
-            margin-top: 24px;
-            margin-bottom: 48px;
+            margin-top: 38px;
+            margin-bottom: 76px;
         }
         @media(max-width: $breakpoint480) {
             flex-direction: column;
-            margin-top: 20px;
-            margin-bottom: 40px;
+            margin-top: 28px;
+            margin-bottom: 56px;
         }
     }
     &__contacts {
@@ -50,9 +50,27 @@
             font-weight: 700;
             font-size: 24px;
             color: #fff;
+
+            @media(max-width: $breakpoint1280) {
+                font-size: 20px;
+            }
+            @media(max-width: $breakpoint992) {
+                font-size: 24px;
+                text-align: right;
+            }
+            @media(max-width: $breakpoint480) {
+                font-size: 20px;
+            }
         }
     }
 
+    &__logo {
+        & img {
+            @media(max-width: $breakpoint992) {
+                height: 66px;
+            }
+        }
+    }
     &__bottom {
         position: relative;
 
@@ -62,6 +80,7 @@
 
         @media(max-width: $breakpoint480) {
             flex-direction: column;
+            gap: 20px;
         }
 
         &::before {
@@ -73,10 +92,10 @@
             background: #fff;
 
             @media(max-width: $breakpoint992) {
-                top: -24px;
+                top: -38px;
             }
             @media(max-width: $breakpoint480) {
-                top: -20px;
+                top: -28px;
             }
         }
     }
@@ -119,13 +138,14 @@
         }
     }
     &__copyright {
-        max-width: 334px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
 
         @media(max-width: $breakpoint992) {
-            max-width: 280px;
-        }
-        @media(max-width: $breakpoint480) {
-            margin-bottom: 12px;
+            position: static;
+            left: 0;
+            transform: translateX(0);
         }
 
         & p {
@@ -133,10 +153,13 @@
             font-size: 18px;
 
             @media(max-width: $breakpoint992) {
-                font-size: 14px;
                 text-align: start;
             }
+            @media(max-width: $breakpoint600) {
+                font-size: 16px;
+            }
             @media(max-width: $breakpoint480) {
+                font-size: 14px;
                 text-align: center;
             }
         }
@@ -147,7 +170,10 @@
         text-align: right;
         color: #fff;
 
-        @media(max-width: $breakpoint992) {
+        @media(max-width: $breakpoint600) {
+            font-size: 16px;
+        }
+        @media(max-width: $breakpoint480) {
             font-size: 14px;
         }
     }
@@ -155,5 +181,40 @@
     &__maker {
         display: block;
         margin: 44px auto 0;
+
+        @media(max-width: $breakpoint600) {
+            margin-top: 38px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 28px;
+        }
+
+        & svg {
+            & path {
+                fill: #fff;
+                opacity: .7;
+                transition: fill .4s;
+
+                &:nth-of-type(1), &:nth-of-type(2) {
+                    fill: none;
+                    stroke: #fff;
+                    transition: stroke .4s;
+                }
+            }
+        }
+
+        &:hover {
+            & svg {
+                & path {
+                    fill: $main-color;
+                    opacity: .7;
+
+                    &:nth-of-type(1), &:nth-of-type(2) {
+                        fill: none;
+                        stroke: $main-color;
+                    }
+                }
+            }
+        }
     }
 }

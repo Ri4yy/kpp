@@ -1,14 +1,16 @@
 .header {
     position: relative;
-
+    
     &__wrapper {
-        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 39px 0;
-        z-index: 2;
+        padding: 35px 0 26px;
+        z-index: 6;
 
+        @media(max-width: $breakpoint1180) {
+            padding: 28px 0 26px;
+        }
         @media(max-width: $breakpoint768) {
             padding: 24px 0;
         }
@@ -17,21 +19,77 @@
         }
     }
 
+    &__logo {
+        @media(max-width: $breakpoint1180) {
+            max-width: 200px;
+        }
+        @media(max-width: $breakpoint768) {
+            max-width: 160px;
+        }
+        @media(max-width: $breakpoint480) {
+            max-width: 120px;
+        }
+    }
+
     &__right {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
+
+        @media(max-width: $breakpoint1024) {
+            display: none;
+        }
     }
-    &__phone {
-        & svg {
-            fill: #fff;
-            transition: fill .4s, scale .4s;
+
+    &__contacts {
+        border: 1px solid rgba(123, 212, 28, 0.48);
+        border-radius: 25px;
+        padding: 12px 24px;
+
+        @media(max-width: $breakpoint1180) {
+            padding: 10px 20px;
         }
 
-        &:hover {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            @media(max-width: $breakpoint1180) {
+                gap: 8px;
+            }
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        &-icon {
+            display: flex;
+            width: 32px;
+
+            @media(max-width: $breakpoint1180) {
+                width: 24px;
+            }
+
             & svg {
-                fill: $main-color;
-                scale: .95;
+                filter: drop-shadow(0 0 10px rgba(132, 255, 0, 0.51));
+            }
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: #fff;
+        }
+    }
+
+    & .social-list {
+
+        &__link {
+            @media(max-width: $breakpoint1180) {
+                width: 40px;
+                height: 40px;
             }
         }
     }
