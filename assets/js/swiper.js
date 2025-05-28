@@ -118,4 +118,29 @@ const swiperInfo = new Swiper('.swiper-info', {
     //   el: '.swiper-pagination-progressbar',
     //   draggable: true,
     // },
-  });
+});
+
+const swiperReview = new Swiper('.swiper-review', {
+    spaceBetween: 20,
+
+    breakpoints: {
+        320: {
+            allowTouchMove: true,
+            slidesPerView: 1,
+            initialSlide: 0,
+        },
+        480: {
+            allowTouchMove: true,
+            slidesPerView: 1
+        },
+        1024: {
+            allowTouchMove: true,
+            slidesPerView: 3
+        },
+    },
+    
+    navigation: {
+        nextEl: '.swiper-groups-next',
+        prevEl: '.swiper-groups-prev',
+    },
+});

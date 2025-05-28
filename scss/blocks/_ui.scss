@@ -129,3 +129,39 @@
         }
     }
 }
+
+input {
+    border: 1px solid #2f302d;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+    background: #2f302d;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+textarea {
+    border: 1px solid #2f302d;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 0 33px 0 rgba(16, 16, 16, 0.57);
+    background: #2f302d;
+
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}

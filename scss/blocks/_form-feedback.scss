@@ -1,0 +1,27 @@
+.form-feedback {
+    margin-top: 56px;
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 16px;
+        column-gap: 6px;
+    }
+
+    &__bottom {
+        margin-top: 32px;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__agree {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    & textarea {
+        grid-column: 1/-1;
+    }
+}
